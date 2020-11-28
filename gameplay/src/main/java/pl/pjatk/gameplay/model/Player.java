@@ -7,6 +7,13 @@ import javax.persistence.Id;
 @Entity
 public class Player {
 
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String nickname;
+    private int attack;
+    private int health;
+    private int mana;
 
 
     public Player(String nickname, Long id, int attack, int health, int mana) {
@@ -61,11 +68,5 @@ public class Player {
         this.mana = mana;
     }
 
-    @Id
-    @GeneratedValue
-    private String nickname;
-    private Long id;
-    private int attack;
-    private int health;
-    private int mana;
+
 }
